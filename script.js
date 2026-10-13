@@ -1,4 +1,4 @@
-// Дневник тренировок — лэндинг: счётчики, экраны в телефоне, калькулятор 1ПМ, ссылка на установку.
+// Дневник тренировок — лэндинг: тема, счётчики, экраны в телефоне, калькулятор 1ПМ, ссылка на установку.
 (() => {
   "use strict";
 
@@ -14,6 +14,29 @@
   const onScroll = () => nav.classList.toggle("is-scrolled", window.scrollY > 8);
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  // ---------------------------------------------------------------- Тема: тёмная или светлая
+  // По умолчанию — как в системе; выбор кнопкой запоминается в браузере.
+  const systemLight = window.matchMedia("(prefers-color-scheme: light)");
+  const themeBtn = document.querySelector("[data-theme-toggle]");
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+  const currentTheme = () => root.dataset.theme || (systemLight.matches ? "light" : "dark");
+
+  function syncTheme() {
+    const dark = currentTheme() === "dark";
+    themeBtn.setAttribute("aria-pressed", String(dark));
+    themeBtn.title = dark ? "Светлая тема" : "Тёмная тема";
+    if (themeMeta) themeMeta.content = getComputedStyle(root).getPropertyValue("--bg").trim() || themeMeta.content;
+  }
+
+  themeBtn.addEventListener("click", () => {
+    const next = currentTheme() === "dark" ? "light" : "dark";
+    root.dataset.theme = next;
+    try { localStorage.setItem("theme", next); } catch (e) { /* без хранилища тема живёт до перезагрузки */ }
+    syncTheme();
+  });
+  systemLight.addEventListener?.("change", syncTheme);
+  syncTheme();
 
   // ---------------------------------------------------------------- Появление и счётчики
   const formatInt = (n) => Math.round(n).toLocaleString("ru-RU");
