@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Дневник тренировок — сила по плану</title>
+  <meta name="description" content="Дневник силовых тренировок для Android: таймер отдыха, программы Шейко, Calgary, 5/3/1, подготовка к соревнованиям, питание, нормативы и справочник для новичков. Работает без интернета.">
+  <meta name="theme-color" content="#11140f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2311140f'/%3E%3Cpath d='M14 28h6v8h-6zM44 28h6v8h-6zM20 24h5v16h-5zM39 24h5v16h-5zM25 30h14v4H25z' fill='%23c5f36a'/%3E%3C/svg%3E">
+</head>
+<body>
+  <span id="top"></span>
+  <a class="skip" href="#main">К содержанию</a>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="Дневник тренировок — в начало">
+        <span class="brand__logo" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><path d="M14 28h6v8h-6zM44 28h6v8h-6zM20 24h5v16h-5zM39 24h5v16h-5zM25 30h14v4H25z"/></svg>
+        </span>
+        <span>Дневник тренировок</span>
+      </a>
+      <nav class="nav__links" aria-label="Разделы">
+        <a href="#features">Возможности</a>
+        <a href="#plan">Подготовка</a>
+        <a href="#food">Питание</a>
+        <a href="#try">Попробовать</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <a class="btn btn--small" href="#download" data-download>Установить</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================================================ HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__text reveal">
+          <p class="eyebrow">Android · работает без интернета</p>
+          <h1>Сила растёт <span class="accent">по плану</span>, а&nbsp;не&nbsp;наугад</h1>
+          <p class="lead">
+            Дневник силовых тренировок, который помнит каждый подход, считает веса по методикам Шейко, Calgary и 5/3/1,
+            готовит к соревнованиям и подсказывает, что поменять, — но решаете всегда вы.
+          </p>
+          <div class="hero__cta">
+            <a class="btn" href="#download" data-download>Установить для Android</a>
+            <a class="btn btn--ghost" href="#features">Что умеет</a>
+          </div>
+          <ul class="hero__chips" aria-label="Коротко">
+            <li>Без аккаунта</li>
+            <li>Данные — на телефоне</li>
+            <li>Тёмная и светлая тема</li>
+          </ul>
+        </div>
+
+        <div class="hero__phone reveal" aria-label="Экраны приложения">
+          <div class="phone" role="tabpanel" id="phone-screen" aria-live="polite">
+            <div class="phone__notch" aria-hidden="true"></div>
+
+            <!-- Тренировка -->
+            <div class="screen is-active" data-screen="workout">
+              <div class="scr-top">
+                <span class="scr-back" aria-hidden="true">←</span>
+                <div>
+                  <div class="scr-timer">42:15</div>
+                  <div class="scr-sub">≈ ещё 35 мин · до 19:30</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__title">Приседания со штангой</div>
+                <div class="card__meta">5 × 5 · 75 % · RPE&nbsp;8</div>
+                <div class="sets">
+                  <div class="set is-warm"><span>Р</span><span>60 кг</span><span>× 5</span><span class="ok">✓</span></div>
+                  <div class="set is-done"><span>1</span><span>112,5 кг</span><span>× 5</span><span class="ok">✓</span></div>
+                  <div class="set is-done"><span>2</span><span>112,5 кг</span><span>× 5</span><span class="ok">✓</span></div>
+                  <div class="set is-now"><span>3</span><span>112,5 кг</span><span>× 5</span><span class="todo"></span></div>
+                  <div class="set"><span>4</span><span>112,5 кг</span><span>× 5</span><span class="todo"></span></div>
+                </div>
+              </div>
+              <div class="rest">
+                <div class="rest__label">Отдых</div>
+                <div class="rest__time" data-rest>2:15</div>
+                <div class="rest__bar"><i data-rest-bar></i></div>
+              </div>
+              <div class="card">
+                <div class="card__meta">Дальше</div>
+                <div class="card__title">Жим лёжа · 4 × 6</div>
+                <div class="card__meta">Как в прошлый раз: 85 кг × 6 · рекорд 90 кг</div>
+              </div>
+              <div class="plates" aria-hidden="true">
+                <span class="plate p20"></span><span class="plate p20"></span><span class="plate p5"></span><span class="plate p125"></span>
+                <span class="bar"></span>
+              </div>
+            </div>
+
+            <!-- План -->
+            <div class="screen" data-screen="plan">
+              <div class="scr-top"><span class="scr-back" aria-hidden="true">←</span><div class="scr-title">Подготовка к старту</div></div>
+              <div class="card">
+                <div class="card__title">Calgary Barbell</div>
+                <div class="card__meta accent">Неделя 9 из 16 · Интенсификация</div>
+                <div class="card__meta">Соревнования 25 января · через 52 дн.</div>
+                <div class="progress"><i style="width:56%"></i></div>
+              </div>
+              <div class="card card--hi">
+                <div class="card__meta accent">Сегодня</div>
+                <div class="card__title">Присед · жим · неделя 9</div>
+                <div class="card__meta">Присед 3 × 3 @ 82,5 % — 137,5 кг<br>Жим 4 × 4 @ RPE 8</div>
+                <div class="btn btn--small btn--block">▶ Начать</div>
+              </div>
+              <div class="card">
+                <div class="card__title">Рекомендации: 1</div>
+                <div class="card__meta">Присед: рекорд 150 кг — обновить максимум?</div>
+              </div>
+            </div>
+
+            <!-- Питание -->
+            <div class="screen" data-screen="food">
+              <div class="scr-top"><div class="scr-title scr-title--big">Питание</div></div>
+              <div class="card">
+                <div class="card__meta accent">Цель: 82 кг к 1 марта</div>
+                <div class="ring" style="--p:.68"><div><b>1 890</b><small>из 2 780 ккал</small></div></div>
+                <div class="macros">
+                  <span>Белки <b>142</b>/170</span><span>Жиры <b>58</b>/80</span><span>Углев. <b>190</b>/320</span>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__title">Тренд веса</div>
+                <svg class="spark" viewBox="0 0 200 50" aria-hidden="true"><polyline points="0,12 20,16 40,14 60,20 80,22 100,21 120,27 140,30 160,29 180,35 200,38"/></svg>
+                <div class="card__meta">−0,4 кг в неделю · в плане</div>
+              </div>
+            </div>
+
+            <!-- Справочник -->
+            <div class="screen" data-screen="glossary">
+              <div class="scr-top"><span class="scr-back" aria-hidden="true">←</span><div class="scr-title">Справочник</div></div>
+              <div class="search">⌕ RPE</div>
+              <div class="card">
+                <div class="card__title">RPE — оценка тяжести подхода</div>
+                <div class="card__meta">Насколько тяжёлым был подход по шкале до 10: сколько повторений оставалось в запасе.</div>
+                <div class="card__meta accent">Пример: 120 кг × 5, могли бы ещё два — это RPE 8.</div>
+                <div class="chips"><span>RIR</span><span>Форма дня</span><span>Оценка 1ПМ</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-tabs" role="tablist" aria-label="Экран в телефоне">
+            <button role="tab" aria-selected="true" aria-controls="phone-screen" data-show="workout">Тренировка</button>
+            <button role="tab" aria-selected="false" aria-controls="phone-screen" data-show="plan">План</button>
+            <button role="tab" aria-selected="false" aria-controls="phone-screen" data-show="food">Питание</button>
+            <button role="tab" aria-selected="false" aria-controls="phone-screen" data-show="glossary">Справочник</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ NUMBERS -->
+    <section class="numbers" aria-label="В цифрах">
+      <div class="wrap numbers__grid">
+        <div class="num reveal"><b data-count="186">186</b><span>упражнений в справочнике — с мышцами и похожими упражнениями</span></div>
+        <div class="num reveal"><b data-count="28">28</b><span>программ для планов: Шейко, Calgary, Empire, Candito, 5/3/1, масса, похудение, сила</span></div>
+        <div class="num reveal"><b data-count="29">29</b><span>готовых наборов программ — от новичка до сплита</span></div>
+        <div class="num reveal"><b data-count="1246">1246</b><span>продуктов в базе и сканер штрихкодов</span></div>
+        <div class="num reveal"><b data-count="121">121</b><span>блюдо для рационов на неделю</span></div>
+        <div class="num reveal"><b data-count="10">10</b><span>программ восстановления после травм</span></div>
+      </div>
+    </section>
+
+    <!-- ============================================================ FEATURES -->
+    <section class="section" id="features">
+      <div class="wrap">
+        <p class="eyebrow reveal">Всё в одном приложении</p>
+        <h2 class="reveal">От первого подхода до помоста</h2>
+
+        <div class="features">
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M10 2h4M12 2v3"/></svg></div>
+            <h3>Тренировка без лишних касаний</h3>
+            <ul>
+              <li>Таймер отдыха с вибрацией за 10 секунд и голосовой подсказкой: что, какой вес и сколько раз</li>
+              <li>Уведомление в шторке и виджет на рабочем столе — «Выполнено» прямо оттуда</li>
+              <li>Разминка по вашей схеме, дроп-сеты, суперсеты, топ-синглы</li>
+              <li>Какие блины вешать — с учётом вашего грифа и набора блинов</li>
+              <li>«Как в прошлый раз», рекорды прямо в подходе и оценка «сколько ещё»</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h10M7 17h6"/></svg></div>
+            <h3>Программы на любой вкус</h3>
+            <ul>
+              <li>Библиотека: Starting Strength, 5×5, GZCLP, 5/3/1 BBB, PHUL, верх/низ, жимы/тяги/ноги, дома, гиря, калистеника</li>
+              <li>Подбор по цели за четыре вопроса — или своя программа с нуля</li>
+              <li>Чередование подсобки: раз в 4 тренировки — на похожие упражнения; нужное можно закрепить</li>
+              <li>Приложение помнит, какая программа следующая</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal" id="plan">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4"/></svg></div>
+            <h3>Подготовка к соревнованиям</h3>
+            <ul>
+              <li>План по методике к дате старта: Шейко (11 вариантов), Calgary Barbell, Empire Barbell, Candito, 5/3/1</li>
+              <li>Подводка и опенеры, межсезонье до начала программы, календарь и PDF плана</li>
+              <li>Рекомендации по факту: новый максимум между блоками, рекорд, недобор повторов, пропуск, перерыв, «форма дня» по RPE</li>
+              <li>Всё — только с вашего согласия, любое изменение можно отменить</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h3M8 17h6"/></svg></div>
+            <h3>План на срок под цель</h3>
+            <ul>
+              <li>Масса, похудение, сила, здоровье — от 2 до 52 недель, срок выбирается слайдером</li>
+              <li>Программа сама повторяет циклы с прибавкой весов и разгрузками</li>
+              <li>Восстановление после травмы: плечо, локоть, запястье, поясница, колено, голеностоп, шея — по фазам, со шкалой боли</li>
+              <li>Проблемные зоны и упражнения, которые вы не делаете, — план заменит щадящими</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal" id="food">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0zM8 8c0-2 2-4 4-4M12 8c1-2 3-3 5-3"/></svg></div>
+            <h3>Питание и вес</h3>
+            <ul>
+              <li>Цель по массе и калории: сначала по формуле, через пару недель — по вашему фактическому расходу</li>
+              <li>Дневник питания: 1246 продуктов, свои блюда, сканер штрихкодов (Open Food Facts)</li>
+              <li>Рацион на неделю под цель — с закреплением любимых блюд</li>
+              <li>Тренд веса без скачков воды и подсказки к взвешиванию перед стартом</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 20h18M5 16l4-5 4 3 6-8"/><path d="M15 6h4v4"/></svg></div>
+            <h3>Прогресс, который видно</h3>
+            <ul>
+              <li>Статистика, рекорды и графики по каждому упражнению</li>
+              <li>Недельная нагрузка, баланс жимов и тяг, плато — с подсказкой, что поменять</li>
+              <li>Тело: вес, замеры и фото прогресса со сравнением «до и после»</li>
+              <li>Итоги недели и цель по числу тренировок</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="15" r="6"/><path d="M9 3l3 6 3-6M12 13v4"/></svg></div>
+            <h3>Нормативы и калькуляторы</h3>
+            <ul>
+              <li>Разряды ФПР (IPF), WRPF, WPF и НАП — где вы сейчас и сколько до следующего</li>
+              <li>1ПМ и рабочие веса, вес по таблице RPE</li>
+              <li>Очки DOTS, IPF GL, Wilks; попытки и разминка к ним</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6c-2-1.5-5-2-8-2v14c3 0 6 .5 8 2 2-1.5 5-2 8-2V4c-3 0-6 .5-8 2zM12 6v14"/></svg></div>
+            <h3>Понятно даже новичку</h3>
+            <ul>
+              <li>Справочник: 48 терминов — 1ПМ, RPE, КПШ, ТМ, опенер, подводка, DOTS, БЖУ, RED-S</li>
+              <li>Значок «?» прямо на экранах открывает нужное объяснение</li>
+              <li>Знакомство при первом запуске и подсказки по технике упражнений</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg></div>
+            <h3>Ваши данные — ваши</h3>
+            <ul>
+              <li>Без аккаунта и без интернета: всё хранится на телефоне</li>
+              <li>Резервная копия в файл, автокопия раз в неделю в выбранную папку, облачная копия Android</li>
+              <li>Импорт истории из Strong, Hevy и FitNotes, экспорт подходов в CSV</li>
+              <li>Корзина: удалённые тренировки и программы — 30 дней</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ HOW -->
+    <section class="section section--alt" aria-labelledby="how-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">Как это работает</p>
+        <h2 id="how-title" class="reveal">Три шага — и тренировки идут сами</h2>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__n">1</span>
+            <h3>Расскажите о себе</h3>
+            <p>Максимумы, вес, федерация — всё необязательно, но с этим веса и нормативы точнее.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__n">2</span>
+            <h3>Выберите путь</h3>
+            <p>Готовая программа, план к соревнованиям, план на срок под цель — или своя программа.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__n">3</span>
+            <h3>Тренируйтесь</h3>
+            <p>Отмечайте подходы. Приложение посчитает веса, напомнит об отдыхе и подскажет, когда пора прибавить.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================ TRY -->
+    <section class="section" id="try" aria-labelledby="try-title">
+      <div class="wrap try">
+        <div class="try__text">
+          <p class="eyebrow reveal">Попробуйте прямо здесь</p>
+          <h2 id="try-title" class="reveal">Сколько вы поднимете на раз?</h2>
+          <p class="reveal">
+            Введите вес и повторения последнего тяжёлого подхода — посчитаем оценку максимума по формуле Эпли,
+            как в приложении, и подскажем рабочие веса. Если укажете RPE, учтём, сколько повторений оставалось в запасе.
+          </p>
+        </div>
+        <form class="calc reveal" id="calc" autocomplete="off" novalidate>
+          <div class="calc__row">
+            <label>Вес, кг <input type="number" inputmode="decimal" min="1" max="500" step="0.5" value="100" name="weight"></label>
+            <label>Повторения <input type="number" inputmode="numeric" min="1" max="12" step="1" value="5" name="reps"></label>
+          </div>
+          <fieldset class="calc__rpe">
+            <legend>RPE (необязательно)</legend>
+            <div class="seg" role="radiogroup">
+              <label><input type="radio" name="rpe" value="" checked><span>—</span></label>
+              <label><input type="radio" name="rpe" value="7"><span>7</span></label>
+              <label><input type="radio" name="rpe" value="8"><span>8</span></label>
+              <label><input type="radio" name="rpe" value="9"><span>9</span></label>
+              <label><input type="radio" name="rpe" value="10"><span>10</span></label>
+            </div>
+          </fieldset>
+          <output class="calc__out" name="out" aria-live="polite">
+            <span class="calc__big" data-e1rm>117 кг</span>
+            <span class="calc__hint" data-hint>оценка 1ПМ</span>
+          </output>
+          <div class="calc__table" data-table aria-label="Рабочие веса"></div>
+          <p class="calc__note">Оценка точнее всего на 1–6 повторениях. Проверенный максимум надёжнее любой формулы.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================================================ PRINCIPLES -->
+    <section class="section section--alt" aria-labelledby="pr-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">Принципы</p>
+        <h2 id="pr-title" class="reveal">Умное, но не самоуверенное</h2>
+        <div class="principles">
+          <div class="principle reveal">
+            <h3>Решаете вы</h3>
+            <p>Приложение предлагает — с причиной и данными. Без нажатия «Принять» план не меняется, а принятое можно отменить.</p>
+          </div>
+          <div class="principle reveal">
+            <h3>Честно о пределах</h3>
+            <p>Не ставит диагнозов и не составляет протоколы сгонки. Рост максимума по формулам ограничен, слишком низкие калории не предложит.</p>
+          </div>
+          <div class="principle reveal">
+            <h3>Уважает правила автора</h3>
+            <p>Правила методики отделены от осторожных поправок самого приложения — всегда видно, что откуда.</p>
+          </div>
+          <div class="principle reveal">
+            <h3>Для всех</h3>
+            <p>Работает с TalkBack и крупным шрифтом, в тёмной и светлой теме. Вкладки и карточки главной — как удобно вам.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq">
+        <p class="eyebrow reveal">Вопросы</p>
+        <h2 id="faq-title" class="reveal">Коротко о главном</h2>
+        <details class="reveal">
+          <summary>Нужен ли интернет?</summary>
+          <p>Нет. Все тренировки, планы и расчёты работают офлайн. Интернет нужен только для поиска продукта по штрихкоду в Open Food Facts и для облачной копии, если вы её включите.</p>
+        </details>
+        <details class="reveal">
+          <summary>Я новичок — не запутаюсь?</summary>
+          <p>Начните с подбора программы по цели за четыре вопроса или с готовой программы для новичков. Непонятные слова объясняет справочник — значок «?» рядом с термином открывает нужную карточку.</p>
+        </details>
+        <details class="reveal">
+          <summary>Подойдёт ли для пауэрлифтинга?</summary>
+          <p>Да: план к дате старта по Шейко, Calgary, Empire, Candito или 5/3/1, подводка и опенеры, попытки, нормативы ФПР, WRPF, WPF и НАП, очки DOTS и IPF GL.</p>
+        </details>
+        <details class="reveal">
+          <summary>Можно перенести историю из другого приложения?</summary>
+          <p>Да, из Strong, Hevy и FitNotes — по их CSV-выгрузке. Повторный импорт того же файла ничего не задвоит.</p>
+        </details>
+        <details class="reveal">
+          <summary>Где хранятся мои данные?</summary>
+          <p>Только на вашем телефоне. Резервную копию можно сохранить в файл, настроить еженедельную автокопию в папку или включить облачную копию Android.</p>
+        </details>
+        <details class="reveal">
+          <summary>На каких телефонах работает?</summary>
+          <p>На Android 8.0 и новее.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============================================================ DOWNLOAD -->
+    <section class="cta" id="download" aria-labelledby="dl-title">
+      <div class="wrap cta__inner reveal">
+        <h2 id="dl-title">Следующий подход — уже с планом</h2>
+        <p>Android 8.0+ · без аккаунта · данные на телефоне</p>
+        <a class="btn btn--big" href="#download" data-download data-download-main>Установить для Android</a>
+        <p class="cta__soon" data-soon hidden>Скоро — следите за обновлениями.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© <span data-year>2026</span> Дневник тренировок</span>
+      <span class="footer__note">Не является медицинской рекомендацией. При травмах и заболеваниях обсудите тренировки и питание со специалистом.</span>
+      <a href="#top">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
