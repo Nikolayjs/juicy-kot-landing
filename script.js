@@ -3,7 +3,7 @@
   "use strict";
 
   /** Ссылка на установку (APK или магазин). Пусто — кнопки показывают «Скоро». */
-  const DOWNLOAD_URL = "";
+  const DOWNLOAD_URL = "download/dnevnik-trenirovok-0.1.0.apk";
 
   const root = document.documentElement;
   root.classList.remove("no-js");
@@ -166,9 +166,21 @@
 
   // ---------------------------------------------------------------- Установка
   const soon = document.querySelector("[data-soon]");
+  // Скачивание — только после подтверждения: кнопки открывают окно, файл отдаёт кнопка в нём.
+  const dlDialog = document.querySelector("[data-download-dialog]");
+  if (dlDialog) {
+    dlDialog.querySelector("[data-download-confirm]")?.addEventListener("click", () => setTimeout(() => dlDialog.close(), 0));
+    // Касание по затемнению вокруг окна — закрыть.
+    dlDialog.addEventListener("click", (e) => { if (e.target === dlDialog) dlDialog.close(); });
+  }
   document.querySelectorAll("[data-download]").forEach((a) => {
     if (DOWNLOAD_URL) {
-      a.href = DOWNLOAD_URL;
+      a.href = "#download";
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (dlDialog && typeof dlDialog.showModal === "function") dlDialog.showModal();
+        else if (window.confirm("Скачать APK «Дневник тренировок» (4 МБ)?")) window.location.href = DOWNLOAD_URL;
+      });
       return;
     }
     // Ссылки ещё нет: главная кнопка честно говорит «скоро», остальные ведут к ней.
