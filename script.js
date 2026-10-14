@@ -22,7 +22,20 @@
   const themeMeta = document.querySelector('meta[name="theme-color"]');
   const currentTheme = () => root.dataset.theme || (systemLight.matches ? "light" : "dark");
 
+  // Тема снимков: пока переключатель не трогали — как у сайта (data-shots не задан).
+  const shots = document.querySelector(".shots");
+  const shotButtons = document.querySelectorAll("[data-shots-theme]");
+  function syncShots() {
+    const t = (shots && shots.dataset.shots) || currentTheme();
+    shotButtons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.shotsTheme === t)));
+  }
+  shotButtons.forEach((b) => b.addEventListener("click", () => {
+    if (shots) shots.dataset.shots = b.dataset.shotsTheme;
+    syncShots();
+  }));
+
   function syncTheme() {
+    syncShots();
     const dark = currentTheme() === "dark";
     themeBtn.setAttribute("aria-pressed", String(dark));
     themeBtn.title = dark ? "Светлая тема" : "Тёмная тема";

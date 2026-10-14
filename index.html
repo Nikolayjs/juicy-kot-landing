@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
   <script>
     // Тема до отрисовки, чтобы страница не мигала: сохранённый выбор важнее системной.
     try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
@@ -186,25 +186,35 @@
         <h2 id="screens-title" class="reveal">Вот так это выглядит, пока ты не уронил телефон под штангу</h2>
         <div class="shots" tabindex="0" aria-label="Снимки экранов, прокручиваются вбок">
           <figure class="shot reveal">
-            <img src="screens/home.webp?v=2" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Главная»: неделя, план, что заметили и итоги недели">
+            <img class="shot__img shot__img--dark" src="screens/home.webp?v=3" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Главная»: неделя, план, что заметили и итоги недели">
+            <img class="shot__img shot__img--light" src="screens/home-light.webp?v=3" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Главная»: неделя, план, что заметили и итоги недели">
             <figcaption>Главная<span>Неделя, рекорды и что приложение про тебя заметило</span></figcaption>
           </figure>
           <figure class="shot reveal">
-            <img src="screens/workout.webp?v=2" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Тренировка»: подходы, блины на сторону, рекорды и таймер отдыха">
+            <img class="shot__img shot__img--dark" src="screens/workout.webp?v=3" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Тренировка»: подходы, блины на сторону, рекорды и таймер отдыха">
+            <img class="shot__img shot__img--light" src="screens/workout-light.webp?v=3" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Тренировка»: подходы, блины на сторону, рекорды и таймер отдыха">
             <figcaption>Тренировка<span>Подходы, блины и таймер, который не даст залипнуть в рилсы</span></figcaption>
           </figure>
           <figure class="shot reveal">
-            <img src="screens/plan.webp?v=2" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Подготовка к старту»: план по шейко к дате, прогноз разряда, весовая категория">
+            <img class="shot__img shot__img--dark" src="screens/plan.webp?v=3" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Подготовка к старту»: план по шейко к дате, прогноз разряда, весовая категория">
+            <img class="shot__img shot__img--light" src="screens/plan-light.webp?v=3" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Подготовка к старту»: план по шейко к дате, прогноз разряда, весовая категория">
             <figcaption>Подготовка к старту<span>Шейко к дате старта и сколько осталось до разряда</span></figcaption>
           </figure>
           <figure class="shot reveal">
-            <img src="screens/food.webp?v=2" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Питание»: калории на сегодня, рацион и тренд веса">
+            <img class="shot__img shot__img--dark" src="screens/food.webp?v=3" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Питание»: калории на сегодня, рацион и тренд веса">
+            <img class="shot__img shot__img--light" src="screens/food-light.webp?v=3" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Питание»: калории на сегодня, рацион и тренд веса">
             <figcaption>Питание<span>Сколько съел и сколько ещё надо в себя впихнуть</span></figcaption>
           </figure>
           <figure class="shot reveal">
-            <img src="screens/stats.webp?v=2" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Прогресс»: тренировки по неделям, тоннаж и нагрузка по мышцам">
+            <img class="shot__img shot__img--dark" src="screens/stats.webp?v=3" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Прогресс»: тренировки по неделям, тоннаж и нагрузка по мышцам">
+            <img class="shot__img shot__img--light" src="screens/stats-light.webp?v=3" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Прогресс»: тренировки по неделям, тоннаж и нагрузка по мышцам">
             <figcaption>Прогресс<span>Графики, на которых видно, что ноги ты опять пропустил</span></figcaption>
           </figure>
+        </div>
+        <div class="shots__switch" role="group" aria-label="Тема на скриншотах">
+          <span>Скрины:</span>
+          <button type="button" data-shots-theme="dark" aria-pressed="true">Тёмная</button>
+          <button type="button" data-shots-theme="light" aria-pressed="false">Светлая</button>
         </div>
         <p class="shots__note reveal">Данные на скринах выдуманные: восемь недель идеальных тренировок — такие бывают только в демо.</p>
       </div>
@@ -457,6 +467,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=2" defer></script>
+  <script src="script.js?v=3" defer></script>
 </body>
 </html>
