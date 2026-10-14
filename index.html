@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
   <script>
     // Тема до отрисовки, чтобы страница не мигала: сохранённый выбор важнее системной.
     try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
@@ -30,6 +30,7 @@
       </a>
       <nav class="nav__links" aria-label="Разделы">
         <a href="#features">Возможности</a>
+        <a href="#screens">Экраны</a>
         <a href="#plan">Подготовка</a>
         <a href="#food">Питание</a>
         <a href="#try">Попробовать</a>
@@ -178,6 +179,37 @@
       </div>
     </section>
 
+    <!-- ============================================================ SCREENS -->
+    <section class="section section--alt" id="screens" aria-labelledby="screens-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">Как это выглядит</p>
+        <h2 id="screens-title" class="reveal">Настоящие экраны приложения</h2>
+        <div class="shots" tabindex="0" aria-label="Снимки экранов, прокручиваются вбок">
+          <figure class="shot reveal">
+            <img src="screens/home.webp" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Главная»: неделя, план, что заметили и итоги недели">
+            <figcaption>Главная<span>Неделя, план, что заметили и итоги недели</span></figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <img src="screens/workout.webp" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Тренировка»: подходы, блины на сторону, рекорды и таймер отдыха">
+            <figcaption>Тренировка<span>Подходы, блины на сторону, рекорды и таймер отдыха</span></figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <img src="screens/plan.webp" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Подготовка к старту»: план по шейко к дате, прогноз разряда, весовая категория">
+            <figcaption>Подготовка к старту<span>План по Шейко к дате, прогноз разряда, весовая категория</span></figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <img src="screens/food.webp" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Питание»: калории на сегодня, рацион и тренд веса">
+            <figcaption>Питание<span>Калории на сегодня, рацион и тренд веса</span></figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <img src="screens/stats.webp" width="600" height="1241" loading="lazy" decoding="async" alt="Экран «Прогресс»: тренировки по неделям, тоннаж и нагрузка по мышцам">
+            <figcaption>Прогресс<span>Тренировки по неделям, тоннаж и нагрузка по мышцам</span></figcaption>
+          </figure>
+        </div>
+        <p class="shots__note reveal">Снимки с демонстрационными данными: 8 недель тренировок, план к соревнованиям и цель по массе.</p>
+      </div>
+    </section>
+
     <!-- ============================================================ FEATURES -->
     <section class="section" id="features">
       <div class="wrap">
@@ -237,6 +269,7 @@
               <li>Цель по массе и калории: сначала по формуле, через пару недель — по вашему фактическому расходу</li>
               <li>Дневник питания: 1246 продуктов, свои блюда, сканер штрихкодов (Open Food Facts)</li>
               <li>Рацион на неделю под цель — с закреплением любимых блюд, можно только из простых: 2–4 продукта, без сложной готовки</li>
+              <li>Цель пересчиталась по факту — порции рациона подгоняются под новые калории одной кнопкой, блюда те же</li>
               <li>Спортивное питание: протеин, гейнер, креатин — порциями на воде, молоке, кефире или соке</li>
               <li>Тренд веса без скачков воды и подсказки к взвешиванию перед стартом</li>
             </ul>
@@ -267,7 +300,7 @@
             <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6c-2-1.5-5-2-8-2v14c3 0 6 .5 8 2 2-1.5 5-2 8-2V4c-3 0-6 .5-8 2zM12 6v14"/></svg></div>
             <h3>Понятно даже новичку</h3>
             <ul>
-              <li>Справочник: 48 терминов — 1ПМ, RPE, КПШ, ТМ, опенер, подводка, DOTS, БЖУ, RED-S</li>
+              <li>Справочник: 50 терминов — 1ПМ, RPE, КПШ, ТМ, опенер, подводка, DOTS, БЖУ, RED-S</li>
               <li>Значок «?» прямо на экранах открывает нужное объяснение</li>
               <li>Начните с простого дневника: питание, тело и подготовку к соревнованиям включите, когда понадобятся</li>
               <li>Знакомство при первом запуске и подсказки по технике упражнений</li>
@@ -369,7 +402,7 @@
           </div>
           <div class="principle reveal">
             <h3>Для всех</h3>
-            <p>Работает с TalkBack и крупным шрифтом, в тёмной и светлой теме. Вкладки и карточки главной — как удобно вам.</p>
+            <p>Работает с TalkBack и крупным шрифтом: заголовки для навигации, понятные подписи кнопок, крупные зоны нажатия. Тёмная и светлая тема, вкладки и карточки главной — как удобно вам.</p>
           </div>
         </div>
       </div>
