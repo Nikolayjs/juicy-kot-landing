@@ -3,7 +3,7 @@
   "use strict";
 
   /** Ссылка на установку (APK или магазин). Пусто — кнопки показывают «Скоро». */
-  const DOWNLOAD_URL = "download/dnevnik-trenirovok-0.1.0.apk";
+  const DOWNLOAD_URL = "download/dnevnik-trenirovok-0.2.0.apk";
 
   const root = document.documentElement;
   root.classList.remove("no-js");
