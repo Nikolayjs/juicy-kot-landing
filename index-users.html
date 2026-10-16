@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
   <script>
     // Тема до отрисовки, чтобы страница не мигала: сохранённый выбор важнее системной.
     try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
@@ -77,33 +77,37 @@
                 <span class="scr-back" aria-hidden="true">←</span>
                 <div>
                   <div class="scr-timer">42:15</div>
-                  <div class="scr-sub">≈ ещё 35 мин · до 19:30</div>
+                  <div class="scr-sub">2 из 12 · до 19:30 · Сила · день A</div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card__title">Приседания со штангой</div>
-                <div class="card__meta">5 × 5 · 75 % · RPE&nbsp;8</div>
-                <div class="sets">
-                  <div class="set is-warm"><span>Р</span><span>60 кг</span><span>× 5</span><span class="ok">✓</span></div>
-                  <div class="set is-done"><span>1</span><span>112,5 кг</span><span>× 5</span><span class="ok">✓</span></div>
-                  <div class="set is-done"><span>2</span><span>112,5 кг</span><span>× 5</span><span class="ok">✓</span></div>
-                  <div class="set is-now"><span>3</span><span>112,5 кг</span><span>× 5</span><span class="todo"></span></div>
-                  <div class="set"><span>4</span><span>112,5 кг</span><span>× 5</span><span class="todo"></span></div>
+              <div class="scr-progress" aria-hidden="true"><i style="width:17%"></i></div>
+              <div class="card card--cur">
+                <div class="card__title">1. Приседания со штангой</div>
+                <div class="card__meta">2 / 3 подх. · отдых 3:00</div>
+                <div class="w-done-row"><span class="w-badge">✓</span><span>2 подхода · 100 кг × 5</span><span class="w-chev" aria-hidden="true">⌄</span></div>
+                <div class="w-cur-set">
+                  <div class="w-cur-set__row"><span class="w-num">3</span><span>100 кг × 5</span></div>
+                  <div class="w-steps">
+                    <div class="w-step"><span>−</span><b>100</b><span>+</span></div>
+                    <div class="w-step"><span>−</span><b>5</b><span>+</span></div>
+                  </div>
+                  <div class="w-plates-row">
+                    <span class="w-plates" aria-hidden="true"><i class="w-p20"></i><i class="w-p20"></i><i class="w-bar"></i></span>
+                    <span class="w-plates-row__label">На сторону</span>
+                    <b>20 + 20</b>
+                  </div>
                 </div>
+                <div class="w-add-set">+ Подход</div>
               </div>
-              <div class="rest">
-                <div class="rest__label">Отдых</div>
-                <div class="rest__time" data-rest>2:15</div>
-                <div class="rest__bar"><i data-rest-bar></i></div>
-              </div>
-              <div class="card">
-                <div class="card__meta">Дальше</div>
-                <div class="card__title">Жим лёжа · 4 × 6</div>
-                <div class="card__meta">Как в прошлый раз: 85 кг × 6 · рекорд 90 кг</div>
-              </div>
-              <div class="plates" aria-hidden="true">
-                <span class="plate p20"></span><span class="plate p20"></span><span class="plate p5"></span><span class="plate p125"></span>
-                <span class="bar"></span>
+              <div class="w-ex-row"><span class="w-mini">0/3</span><span>2. Жим лёжа</span><span class="w-ex-row__next">85 кг × 6</span></div>
+              <div class="w-ex-row"><span class="w-mini">0/3</span><span>3. Тяга в наклоне</span><span class="w-ex-row__next">65 кг × 8</span></div>
+              <div class="w-ex-row"><span class="w-mini">0/3</span><span>4. Тяга каната к лицу</span><span class="w-ex-row__next">3 блока × 12</span></div>
+              <div class="w-bottom-bar">
+                <div class="w-main-btn">✓ Подход выполнен</div>
+                <div class="w-rest-pill">
+                  <b data-rest>2:15</b><small>отдых</small>
+                  <span class="w-rest-pill__bar"><i data-rest-bar></i></span>
+                </div>
               </div>
             </div>
 
