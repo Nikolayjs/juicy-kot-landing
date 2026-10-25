@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
   <script>
     // Тема до отрисовки, чтобы страница не мигала: сохранённый выбор важнее системной.
     try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
@@ -32,6 +32,7 @@
         <a href="#features">Возможности</a>
         <a href="#screens">Экраны</a>
         <a href="#plan">Подготовка</a>
+        <a href="#coach">Тренеру</a>
         <a href="#food">Питание</a>
         <a href="#try">Попробовать</a>
         <a href="#faq">Вопросы</a>
@@ -240,6 +241,8 @@
               <li>Разминка по вашей схеме, дроп-сеты, суперсеты, топ-синглы</li>
               <li>Какие блины вешать — с учётом вашего грифа и набора блинов; тренажёры — в блоках, вес плитки задаёте сами</li>
               <li>«Как в прошлый раз», рекорды прямо в подходе и оценка «сколько ещё»</li>
+              <li>Опрос готовности перед тренировкой; при низкой готовности — облегчить день: −5 % к весам или минус подход, с отменой</li>
+              <li>Шаг веса под снаряд: у штанги — по блинам, у гантелей и тренажёров — 1 кг</li>
             </ul>
           </article>
 
@@ -329,9 +332,111 @@
               <li>Резервная копия в файл, автокопия раз в неделю в выбранную папку, облачная копия Android</li>
               <li>Импорт истории из Strong, Hevy и FitNotes, экспорт подходов в CSV</li>
               <li>Корзина: удалённые тренировки и программы — 30 дней</li>
+              <li>Если вас ведёт тренер с компьютера — план и правки приходят по Wi‑Fi автоматически, тренировки уходят тренеру; без облака</li>
             </ul>
           </article>
         </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================ COACH -->
+    <section class="section section--alt" id="coach" aria-labelledby="coach-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">Для тренера</p>
+        <h2 id="coach-title" class="reveal">Рабочее место тренера на компьютере</h2>
+        <p class="lead reveal">К дневнику есть программа для Windows: тренер ведёт всех спортсменов, составляет и правит планы, а телефоны спортсменов получают изменения по Wi‑Fi. Сейчас программа выдаётся тренерам по запросу.</p>
+        <div class="features">
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 1.8 6 5"/></svg></div>
+            <h3>Сводка по команде</h3>
+            <ul>
+              <li>Первыми — спортсмены, которым нужно внимание: боль, пропуски, резкий рост нагрузки</li>
+              <li>Неделя команды: выполнено, по плану, пропущено</li>
+              <li>Вкладки, поиск и компактный список для десятков спортсменов</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 20h18M4 16l4-4 3 2 4-6 5 5"/><path d="M4 6h4"/></svg></div>
+            <h3>Контроль нагрузки</h3>
+            <ul>
+              <li>Нагрузка по тяжести и длительности тренировок (sRPE)</li>
+              <li>ACWR и монотонность — рост нагрузки без резких скачков</li>
+              <li>Кривая формы для подводки к старту</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/><path d="M8 12h2l1-2 2 4 1-2h2"/></svg></div>
+            <h3>Готовность и травмы</h3>
+            <ul>
+              <li>Утренний опрос (сон, стресс, усталость, мышцы) относительно личной нормы спортсмена</li>
+              <li>Еженедельный опрос о проблемах OSTRC с оценкой тяжести</li>
+              <li>Журнал травм: ограниченные упражнения отмечаются в плане</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h3M8 17h6"/></svg></div>
+            <h3>Планы</h3>
+            <ul>
+              <li>Генератор: Шейко, Calgary, Empire, Candito, 5/3/1, планы на срок под цель</li>
+              <li>Индивидуальная правка, шаблоны, действия сразу для нескольких спортсменов</li>
+              <li>Неделя текстом для мессенджера и план в PDF</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3v18M18 3v18M6 9h3M18 9h-3M6 13h3M18 13h-3M3 21h6M15 21h6"/></svg></div>
+            <h3>Соревнования</h3>
+            <ul>
+              <li>Попытки, весовая категория и прогноз по нормативам</li>
+              <li>Высоты стоек по залам с переводом на другую стойку</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+            <h3>Данные у тренера</h3>
+            <ul>
+              <li>Данные хранятся на компьютере тренера, без облака и подписок</li>
+              <li>Обмен с телефонами по Wi‑Fi с шифрованием</li>
+              <li>Резервная копия всех спортсменов одним файлом</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ BOTS -->
+    <section class="section" id="bots" aria-labelledby="bots-title">
+      <div class="wrap bots">
+        <div class="bots__text">
+          <p class="eyebrow reveal">Без приложения</p>
+          <h2 id="bots-title" class="reveal">Бот в Telegram, MAX и ВКонтакте</h2>
+          <p class="lead reveal">Спортсмену не обязательно устанавливать приложение: тренер подключает бота в нужном мессенджере, и тренировки ведутся в переписке. Бот работает внутри программы тренера, отдельный сервер не нужен.</p>
+          <div class="feature reveal">
+            <ul>
+              <li>План на день и неделю с комментариями тренера</li>
+              <li>Утренний опрос кнопками; отвеченные вопросы сворачиваются в одну строку с ответами</li>
+              <li>Отчёт после тренировки: «Сделал по плану», тяжесть, боль, длительность — тренировка вносится в дневник автоматически</li>
+              <li>Еженедельный опрос о травмах и перегрузке</li>
+              <li>Сообщения тренеру — в его заметки</li>
+            </ul>
+          </div>
+          <ul class="tags reveal" aria-label="Мессенджеры"><li>Telegram</li><li>MAX</li><li>ВКонтакте</li></ul>
+        </div>
+          <div class="chat reveal" aria-label="Пример переписки с ботом">
+            <div class="chat__head"><span class="chat__avatar" aria-hidden="true">JK</span><b>Бот тренера</b><small>бот</small></div>
+            <div class="chat__msg">Доброе утро! Сегодня по плану:<br><b>Присед 5×3 @ 80 % — 120 кг<br>Жим 4×5 @ RPE 7</b></div>
+            <div class="chat__keys"><span>Сделал по плану</span><span>Не получилось</span></div>
+            <div class="chat__msg chat__msg--done">Утренний опрос: сон 4 · стресс 3 · усталость 4 · мышцы 5. Записал, спасибо!</div>
+            <div class="chat__msg">Насколько тяжело было? 1 — очень легко, 10 — на пределе</div>
+            <div class="chat__keys"><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span></div>
+            <div class="chat__msg chat__msg--me">Последний подход тяжело, но докрутил</div>
+            <div class="chat__msg">Передал тренеру ✓</div>
+          </div>
       </div>
     </section>
 
@@ -449,7 +554,19 @@
         </details>
         <details class="reveal">
           <summary>Где хранятся мои данные?</summary>
-          <p>Только на вашем телефоне. Резервную копию можно сохранить в файл, настроить еженедельную автокопию в папку или включить облачную копию Android.</p>
+          <p>На вашем телефоне — и на компьютере тренера, если вы подключили телефон к его программе. Резервную копию можно сохранить в файл, настроить еженедельную автокопию в папку или включить облачную копию Android.</p>
+        </details>
+        <details class="reveal">
+          <summary>Как работает обмен с тренером?</summary>
+          <p>Тренер составляет план в программе на компьютере; телефон получает его по Wi‑Fi — автоматически примерно раз в полчаса или сразу при открытии приложения в той же сети. Выполненные тренировки так же уходят тренеру. Облако не используется, обмен зашифрован.</p>
+        </details>
+        <details class="reveal">
+          <summary>Можно ли тренироваться без приложения?</summary>
+          <p>Да, через бота в Telegram, MAX или ВКонтакте, если тренер его подключил: план, отчёт о тренировке и опросы — кнопками. Таймер отдыха и расчёт блинов доступны только в приложении. Переписка с ботом идёт через выбранный мессенджер.</p>
+        </details>
+        <details class="reveal">
+          <summary>Есть ли версия для компьютера?</summary>
+          <p>Есть программа для тренеров под Windows; сейчас она выдаётся по запросу.</p>
         </details>
         <details class="reveal">
           <summary>На каких телефонах работает?</summary>
@@ -473,12 +590,12 @@
   <dialog class="dl-dialog" data-download-dialog aria-labelledby="dl-dialog-title">
     <form method="dialog">
       <h2 id="dl-dialog-title">Скачать «Дневник тренировок»?</h2>
-      <p>Файл APK, версия 0.3.2, 4 МБ — для Android 8.0 и новее.</p>
+      <p>Файл APK, версия 0.4.0, 4 МБ — для Android 8.0 и новее.</p>
       <p>Приложения пока нет в Google Play, поэтому при установке Android попросит разрешить установку из браузера — для APK с сайта это обычный шаг. Аккаунт не нужен, данные остаются на телефоне.</p>
-      <p class="dl-dialog__hash">SHA-256: <code>0c8c2fda82ff613e745b0dfb9b33fe3b62e2cdb99efc45f6acd8c2f12a72c371</code></p>
+      <p class="dl-dialog__hash">SHA-256: <code>719533241a6bcbfa35357905c9c4954d7ae749fc4c120b30fb4c5a0b9e53da84</code></p>
       <div class="dl-dialog__actions">
         <button class="btn btn--ghost" value="cancel">Отмена</button>
-        <a class="btn" href="download/dnevnik-trenirovok-0.3.2.apk" download data-download-confirm>Скачать</a>
+        <a class="btn" href="download/dnevnik-trenirovok-0.4.0.apk" download data-download-confirm>Скачать</a>
       </div>
     </form>
   </dialog>
@@ -491,6 +608,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=8" defer></script>
+  <script src="script.js?v=9" defer></script>
 </body>
 </html>
