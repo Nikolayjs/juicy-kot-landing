@@ -400,7 +400,7 @@ p { margin: 0 0 1em; }
 }
 .shots__switch button[aria-pressed="true"] { color: var(--on-primary); background: var(--primary); border-color: var(--primary); }
 @media (min-width: 1040px) {
-  .shots { display: grid; grid-template-columns: repeat(5, 1fr); overflow: visible; }
+  .shots { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; overflow: visible; }
 }
 
 /* ---------------------------------------------------------------- Подтверждение скачивания */
