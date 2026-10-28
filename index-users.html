@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
   <script>
     // Тема до отрисовки, чтобы страница не мигала: сохранённый выбор важнее системной.
     try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
@@ -630,12 +630,12 @@
   <dialog class="dl-dialog" data-download-dialog aria-labelledby="dl-dialog-title">
     <form method="dialog">
       <h2 id="dl-dialog-title">Скачать JuiceCat?</h2>
-      <p>Файл APK, версия 0.5.0, 5 МБ — для Android 8.0 и новее.</p>
+      <p>Файл APK, версия 0.6.0, 5 МБ — для Android 8.0 и новее.</p>
       <p>Приложения пока нет в Google Play, поэтому при установке Android попросит разрешить установку из браузера — для APK с сайта это обычный шаг. Аккаунт не нужен, данные остаются на телефоне.</p>
-      <p class="dl-dialog__hash">SHA-256: <code>775efc3d992deda2755621e0636ef096c5907261486ffbb181813ea912c573b2</code></p>
+      <p class="dl-dialog__hash">SHA-256: <code>2a24373c06905b09fcc80ed73a227b5cc0b08e01bb745ecc2e3134956ec61748</code></p>
       <div class="dl-dialog__actions">
         <button class="btn btn--ghost" value="cancel">Отмена</button>
-        <a class="btn" href="download/dnevnik-trenirovok-0.5.0.apk" download data-download-confirm>Скачать</a>
+        <a class="btn" href="download/juicecat-0.6.0.apk" download data-download-confirm>Скачать</a>
       </div>
     </form>
   </dialog>
@@ -648,6 +648,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=10" defer></script>
+  <script src="script.js?v=11" defer></script>
 </body>
 </html>
