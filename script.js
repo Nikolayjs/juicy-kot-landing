@@ -1,4 +1,4 @@
-// Дневник тренировок — лэндинг: тема, счётчики, экраны в телефоне, калькулятор 1ПМ, ссылка на установку.
+// JuiceCat — лэндинг: тема, счётчики, экраны в телефоне, калькулятор 1ПМ, ссылка на установку.
 (() => {
   "use strict";
 
@@ -179,7 +179,7 @@
       a.addEventListener("click", (e) => {
         e.preventDefault();
         if (dlDialog && typeof dlDialog.showModal === "function") dlDialog.showModal();
-        else if (window.confirm("Скачать APK «Дневник тренировок» (4 МБ)?")) window.location.href = DOWNLOAD_URL;
+        else if (window.confirm("Скачать APK JuiceCat (5 МБ)?")) window.location.href = DOWNLOAD_URL;
       });
       return;
     }
