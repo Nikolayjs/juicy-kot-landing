@@ -1,0 +1,11 @@
+{
+  "version": "0.9.0",
+  "notes": "Первый выпуск с автообновлением: ключ «Тренер» (бесплатно — свой дневник и 3 спортсмена), групповые занятия, напоминания об оплате, самочувствие за неделю, фаза цикла (если спортсменка разрешила), проверка копий и автокопия в вашу папку.",
+  "pub_date": "2026-10-30T12:25:00.322Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSMWFtNU5mU2ZrMnFxWEVFOHU1bUsrNTFkTWlQd0tHU0d1b2x2UHlJRFZWejJBcFdRTjNFM1BSSXV4bzdJTndBZzFyY3hIRnhyaFZlRG1adVpPZ08xTHNwWWZTTUtTWlFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMzYzMDk5CWZpbGU6SnVpY2VDYXRfMC45LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuOS4wCjdpMkN3UW1Lb2Jocm84eHB5ZW5vd2FPK213Yk5PNVFIUFJ1N0srQ29FOEtkOUxXNkpYbURXRmU3QzFYSC9OR0ZxQ25FV1FIRXh6ZlRuZXZYRG5RL0RnPT0K",
+      "url": "https://nikolayjs.github.io/juicy-kot-landing/download/desktop/JuiceCat_0.9.0_x64-setup.exe"
+    }
+  }
+}
