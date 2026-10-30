@@ -3,7 +3,7 @@
   "use strict";
 
   /** Ссылка на установку (APK или магазин). Пусто — кнопки показывают «Скоро». */
-  const DOWNLOAD_URL = "download/juicecat-0.9.1.apk";
+  const DOWNLOAD_URL = "download/juicecat-0.9.2.apk";
 
   const root = document.documentElement;
   root.classList.remove("no-js");
